@@ -9,8 +9,8 @@ router.post("/", estudiantesController.registrar);
 
 router
   .route("/:id")
-  .get((req, res), estudiantesController.consultarDetalle)
-  .put((req, res), estudiantesController.actualizar)
-  .delete((req, res), estudiantesController.eliminar);
+  .get(estudiantesController.consultarDetalle)
+  .put(estudiantesController.actualizar)
+  .delete(estudiantesController.eliminar);
 
 module.exports = router;

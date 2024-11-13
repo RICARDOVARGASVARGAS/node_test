@@ -1,8 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const estudiantesRoutes = require("./routes/estudiantesRoutes");
 const profesoresRoutes = require("./routes/profesoresRoutes");
+
+app.use(express.json());
+app.use(cors())
 
 app.use("/estudiantes", estudiantesRoutes);
 app.use("/profesores", profesoresRoutes);

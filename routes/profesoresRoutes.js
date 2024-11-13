@@ -10,8 +10,8 @@ router.post("/", profesoresController.registrar);
 
 router
   .route("/:id")
-  .get((req, res), profesoresController.consultarDetalle)
-  .put((req, res), profesoresController.actualizar)
-  .delete((req, res), profesoresController.eliminar);
+  .get(profesoresController.consultarDetalle)
+  .put(profesoresController.actualizar)
+  .delete(profesoresController.eliminar);
 
 module.exports = router;
